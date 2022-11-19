@@ -1,7 +1,7 @@
 <template>
   <!-- BEGIN: Mobile Menu -->
   <div
-    class="mobile-menu md:hidden"
+    class="mobile-menu md:hidden backdrop-blur"
     :class="{
       'mobile-menu--active': activeMobileMenu,
     }"
@@ -11,7 +11,7 @@
         <img
           alt="Midone Tailwind HTML Admin Template"
           class="w-6"
-          src="@/assets/images/logo.svg"
+          src="https://cdn-icons-png.flaticon.com/512/2936/2936758.png"
         />
       </a>
       <a href="javascript:;" class="mobile-menu-toggler">

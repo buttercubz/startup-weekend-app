@@ -1,6 +1,6 @@
 <template>
   <!-- BEGIN: Main Color Switcher-->
-  <div
+  <!-- <div
     class="shadow-md fixed bottom-0 right-0 box border rounded-full h-12 px-5 flex items-center justify-center z-50 mb-10 mr-52"
   >
     <div class="mr-4 hidden sm:block text-slate-600 dark:text-slate-200">
@@ -51,7 +51,7 @@
         'border-white dark:border-darkmode-600': colorScheme != 'theme-4',
       }"
     ></a>
-  </div>
+  </div> -->
   <!-- END: Main Color Switcher-->
 </template>
 
@@ -67,9 +67,9 @@ const colorSchemeStore = useColorSchemeStore();
 const colorScheme = computed(() => colorSchemeStore.colorScheme);
 
 const setColorSchemeClass = () => {
-  dom("html")
-    .attr("class", colorScheme.value)
-    .addClass(darkMode.value ? "dark" : "");
+  // dom("html")
+  //   .attr("class", colorScheme.value)
+  //   .addClass(darkMode.value ? "dark" : "");
 };
 
 const switchColorScheme = (colorScheme) => {

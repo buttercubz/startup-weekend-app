@@ -11,7 +11,7 @@
     <!-- END: Breadcrumb -->
     <!-- BEGIN: Search -->
     <div class="intro-x relative mr-3 sm:mr-6">
-      <div class="search hidden sm:block">
+      <!-- <div class="search hidden sm:block">
         <input
           type="text"
           class="search__input form-control border-transparent"
@@ -20,10 +20,10 @@
           @blur="hideSearchDropdown"
         />
         <SearchIcon class="search__icon dark:text-slate-500" />
-      </div>
-      <a class="notification sm:hidden" href="">
+      </div> -->
+      <!-- <a class="notification sm:hidden" href="">
         <SearchIcon class="notification__icon dark:text-slate-500" />
-      </a>
+      </a> -->
       <div class="search-result" :class="{ show: searchDropdown }">
         <div class="search-result__content">
           <div class="search-result__content__title">Pages</div>
@@ -65,7 +65,8 @@
                 <img
                   alt="Midone Tailwind HTML Admin Template"
                   class="rounded-full"
-                  :src="faker.photos[0]"
+                  referrerpolicy="no-referrer"
+                  :src="user.photoURL"
                 />
               </div>
               <div class="ml-3">{{ faker.users[0].name }}</div>
@@ -156,33 +157,31 @@
       >
         <img
           alt="Midone Tailwind HTML Admin Template"
-          :src="$f()[9].photos[0]"
+          referrerpolicy="no-referrer"
+          :src="user.photoURL"
         />
       </DropdownToggle>
       <DropdownMenu class="w-56">
         <DropdownContent class="bg-primary text-white">
           <DropdownHeader tag="div" class="!font-normal">
-            <div class="font-medium">{{ $f()[0].users[0].name }}</div>
+            <div class="font-medium">{{ user.displayName }}</div>
             <div class="text-xs text-white/70 mt-0.5 dark:text-slate-500">
-              {{ $f()[0].jobs[0] }}
+              {{ user.email }}
             </div>
           </DropdownHeader>
           <DropdownDivider class="border-white/[0.08]" />
           <DropdownItem class="hover:bg-white/5">
-            <UserIcon class="w-4 h-4 mr-2" /> Profile
+            <UserIcon class="w-4 h-4 mr-2" /> Perfil
           </DropdownItem>
-          <DropdownItem class="hover:bg-white/5">
+          <!-- <DropdownItem class="hover:bg-white/5">
             <EditIcon class="w-4 h-4 mr-2" /> Add Account
-          </DropdownItem>
+          </DropdownItem> -->
           <DropdownItem class="hover:bg-white/5">
-            <LockIcon class="w-4 h-4 mr-2" /> Reset Password
-          </DropdownItem>
-          <DropdownItem class="hover:bg-white/5">
-            <HelpCircleIcon class="w-4 h-4 mr-2" /> Help
+            <HelpCircleIcon class="w-4 h-4 mr-2" /> Ayuda
           </DropdownItem>
           <DropdownDivider class="border-white/[0.08]" />
-          <DropdownItem class="hover:bg-white/5">
-            <ToggleRightIcon class="w-4 h-4 mr-2" /> Logout
+          <DropdownItem class="hover:bg-white/5" @click="signOut">
+            <ToggleRightIcon class="w-4 h-4 mr-2" /> Cerrar Sesion
           </DropdownItem>
         </DropdownContent>
       </DropdownMenu>
@@ -193,13 +192,30 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
+import { useRouter } from "vue-router";
+import { Auth } from "../../firebase/init";
 
+
+const router = useRouter();
 const searchDropdown = ref(false);
-const showSearchDropdown = () => {
-  searchDropdown.value = true;
+
+const user = ref({});
+
+const signOut = async () => {
+  await Auth.signOut();
+  router.push("/login");
 };
-const hideSearchDropdown = () => {
-  searchDropdown.value = false;
-};
+
+onMounted(() => {
+  console.log(Auth.currentUser);
+
+  let interval = setInterval(() => {
+    if (Auth.currentUser !== null) {
+      clearInterval(interval);
+
+      user.value = Auth.currentUser;
+    }
+  }, 1);
+});
 </script>

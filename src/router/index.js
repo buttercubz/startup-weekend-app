@@ -72,6 +72,9 @@ import Chart from "../views/chart/Main.vue";
 import Slider from "../views/slider/Main.vue";
 import ImageZoom from "../views/image-zoom/Main.vue";
 
+import { onAuthStateChanged } from "firebase/auth";
+import { Auth } from "../firebase/init";
+
 const routes = [
   {
     path: "/",
@@ -1108,6 +1111,35 @@ const router = createRouter({
   scrollBehavior(to, from, savedPosition) {
     return savedPosition || { left: 0, top: 0 };
   },
+});
+
+const logged = () =>
+  new Promise((resolve, reject) => {
+    onAuthStateChanged(
+      Auth,
+      (user) => {
+        console.log("call");
+        resolve(user);
+      },
+      (error) => {
+        reject(error);
+      }
+    );
+  });
+
+router.beforeEach(async (to, from, next) => {
+  const navigate = await logged();
+  const toSys = to.path === "/login" && navigate;
+
+  if (toSys) {
+    return (window.location.pathname = "/");
+  }
+
+  if (navigate === null && to.path !== "/login") {
+    return (window.location.pathname = "/login");
+  }
+
+  next();
 });
 
 export default router;

@@ -13,8 +13,8 @@ import ClassicEditor from "./ckeditor/ClassicEditor.vue";
 // import DocumentEditor from './ckeditor/DocumentEditor.vue'
 // import InlineEditor from './ckeditor/InlineEditor.vue'
 import Dropzone from "./dropzone/Main.vue";
-import FullCalendar from "./calendar/Main.vue";
-import FullCalendarDraggable from "./calendar/Draggable.vue";
+// import FullCalendar from "./calendar/Main.vue";
+// import FullCalendarDraggable from "./calendar/Draggable.vue";
 import Notification from "./notification/Main.vue";
 import { Modal, ModalHeader, ModalBody, ModalFooter } from "./modal";
 import {
@@ -58,8 +58,8 @@ export default (app) => {
   // app.component('BalloonEditor', BalloonEditor)
   // app.component('DocumentEditor', DocumentEditor)
   // app.component('InlineEditor', InlineEditor)
-  app.component("FullCalendar", FullCalendar);
-  app.component("FullCalendarDraggable", FullCalendarDraggable);
+  // app.component("FullCalendar", FullCalendar);
+  // app.component("FullCalendarDraggable", FullCalendarDraggable);
   app.component("Notification", Notification);
   app.component("Modal", Modal);
   app.component("ModalHeader", ModalHeader);
@@ -90,5 +90,6 @@ export default (app) => {
 
   for (const [key, icon] of Object.entries(LucideIcons)) {
     app.component(key, icon);
+    console.log({ key, icon });
   }
 };

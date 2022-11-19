@@ -5,30 +5,30 @@
         <!-- BEGIN: General Report -->
         <div class="col-span-12 mt-8">
           <div class="intro-y flex items-center h-10">
-            <h2 class="text-lg font-medium truncate mr-5">General Report</h2>
-            <a href="" class="ml-auto flex items-center text-primary">
+            <h2 class="text-lg font-medium truncate mr-5">Reporte General</h2>
+            <!-- <a href="" class="ml-auto flex items-center text-primary">
               <RefreshCcwIcon class="w-4 h-4 mr-3" /> Reload Data
-            </a>
+            </a> -->
           </div>
           <div class="grid grid-cols-12 gap-6 mt-5">
             <div class="col-span-12 sm:col-span-6 xl:col-span-3 intro-y">
               <div class="report-box zoom-in">
                 <div class="box p-5">
                   <div class="flex">
-                    <ShoppingCartIcon class="report-box__icon text-primary" />
+                    <LandmarkIcon class="report-box__icon text-primary" />
                     <div class="ml-auto">
                       <Tippy
                         tag="div"
                         class="report-box__indicator bg-success cursor-pointer"
-                        content="33% Higher than last month"
+                        content="10% menos en prestamos personales"
                       >
-                        33%
-                        <ChevronUpIcon class="w-4 h-4 ml-0.5" />
+                        10%
+                        <ChevronDownIcon class="w-4 h-4 ml-0.5" />
                       </Tippy>
                     </div>
                   </div>
-                  <div class="text-3xl font-medium leading-8 mt-6">4.710</div>
-                  <div class="text-base text-slate-500 mt-1">Item Sales</div>
+                  <div class="text-3xl font-medium leading-8 mt-6">$100,000</div>
+                  <div class="text-base text-slate-500 mt-1">Prestamos Personales</div>
                 </div>
               </div>
             </div>
@@ -36,15 +36,15 @@
               <div class="report-box zoom-in">
                 <div class="box p-5">
                   <div class="flex">
-                    <CreditCardIcon class="report-box__icon text-pending" />
+                    <LandmarkIcon class="report-box__icon text-pending" />
                     <div class="ml-auto">
                       <Tippy
                         tag="div"
                         class="report-box__indicator bg-danger cursor-pointer"
-                        content="2% Lower than last month"
+                        content="2% mas de intereses en hipotecas"
                       >
                         2%
-                        <ChevronDownIcon class="w-4 h-4 ml-0.5" />
+                        <ChevronUpIcon class="w-4 h-4 ml-0.5" />
                       </Tippy>
                     </div>
                   </div>
@@ -57,7 +57,7 @@
               <div class="report-box zoom-in">
                 <div class="box p-5">
                   <div class="flex">
-                    <MonitorIcon class="report-box__icon text-warning" />
+                    <LandmarkIcon class="report-box__icon text-warning" />
                     <div class="ml-auto">
                       <Tippy
                         tag="div"
@@ -79,7 +79,7 @@
               <div class="report-box zoom-in">
                 <div class="box p-5">
                   <div class="flex">
-                    <UserIcon class="report-box__icon text-success" />
+                    <LandmarkIcon class="report-box__icon text-success" />
                     <div class="ml-auto">
                       <Tippy
                         tag="div"
@@ -101,7 +101,7 @@
         </div>
         <!-- END: General Report -->
         <!-- BEGIN: Sales Report -->
-        <div class="col-span-12 lg:col-span-6 mt-8">
+        <!-- <div class="col-span-12 lg:col-span-6 mt-8">
           <div class="intro-y block sm:flex items-center h-10">
             <h2 class="text-lg font-medium truncate mr-5">Sales Report</h2>
             <div class="sm:ml-auto mt-3 sm:mt-0 relative text-slate-500">
@@ -168,10 +168,10 @@
               <ReportLineChart :height="275" class="mt-6 -mb-6" />
             </div>
           </div>
-        </div>
+        </div> -->
         <!-- END: Sales Report -->
         <!-- BEGIN: Weekly Top Seller -->
-        <div class="col-span-12 sm:col-span-6 lg:col-span-3 mt-8">
+        <!-- <div class="col-span-12 sm:col-span-6 lg:col-span-3 mt-8">
           <div class="intro-y flex items-center h-10">
             <h2 class="text-lg font-medium truncate mr-5">Weekly Top Seller</h2>
             <a href="" class="ml-auto text-primary truncate">Show More</a>
@@ -198,10 +198,10 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
         <!-- END: Weekly Top Seller -->
         <!-- BEGIN: Sales Report -->
-        <div class="col-span-12 sm:col-span-6 lg:col-span-3 mt-8">
+        <!-- <div class="col-span-12 sm:col-span-6 lg:col-span-3 mt-8">
           <div class="intro-y flex items-center h-10">
             <h2 class="text-lg font-medium truncate mr-5">Sales Report</h2>
             <a href="" class="ml-auto text-primary truncate">Show More</a>
@@ -228,7 +228,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
         <!-- END: Sales Report -->
         <!-- BEGIN: Official Store -->
         <div class="col-span-12 xl:col-span-8 mt-6">
@@ -255,7 +255,7 @@
         </div>
         <!-- END: Official Store -->
         <!-- BEGIN: Weekly Best Sellers -->
-        <div class="col-span-12 xl:col-span-4 mt-6">
+        <!-- <div class="col-span-12 xl:col-span-4 mt-6">
           <div class="intro-y flex items-center h-10">
             <h2 class="text-lg font-medium truncate mr-5">
               Weekly Best Sellers
@@ -297,10 +297,10 @@
               >View More</a
             >
           </div>
-        </div>
+        </div> -->
         <!-- END: Weekly Best Sellers -->
         <!-- BEGIN: General Report -->
-        <div class="col-span-12 grid grid-cols-12 gap-6 mt-8">
+        <!-- <div class="col-span-12 grid grid-cols-12 gap-6 mt-8">
           <div class="col-span-12 sm:col-span-6 2xl:col-span-3 intro-y">
             <div class="box p-5 zoom-in">
               <div class="flex items-center">
@@ -369,10 +369,10 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
         <!-- END: General Report -->
         <!-- BEGIN: Weekly Top Products -->
-        <div class="col-span-12 mt-6">
+        <!-- <div class="col-span-12 mt-6">
           <div class="intro-y block sm:flex items-center h-10">
             <h2 class="text-lg font-medium truncate mr-5">
               Weekly Top Products
@@ -527,7 +527,7 @@
               <option>50</option>
             </select>
           </div>
-        </div>
+        </div> -->
         <!-- END: Weekly Top Products -->
       </div>
     </div>
@@ -535,7 +535,7 @@
       <div class="2xl:border-l -mb-10 pb-10">
         <div class="2xl:pl-6 grid grid-cols-12 gap-x-6 2xl:gap-x-0 gap-y-6">
           <!-- BEGIN: Transactions -->
-          <div
+          <!-- <div
             class="col-span-12 md:col-span-6 xl:col-span-4 2xl:col-span-12 mt-3 2xl:mt-8"
           >
             <div class="intro-x flex items-center h-10">
@@ -580,10 +580,10 @@
                 >View More</a
               >
             </div>
-          </div>
+          </div> -->
           <!-- END: Transactions -->
           <!-- BEGIN: Recent Activities -->
-          <div
+          <!-- <div
             class="col-span-12 md:col-span-6 xl:col-span-4 2xl:col-span-12 mt-3"
           >
             <div class="intro-x flex items-center h-10">
@@ -740,10 +740,10 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
           <!-- END: Recent Activities -->
           <!-- BEGIN: Important Notes -->
-          <div
+          <!-- <div
             class="col-span-12 md:col-span-6 xl:col-span-12 xl:col-start-1 xl:row-start-1 2xl:col-start-auto 2xl:row-start-auto mt-3"
           >
             <div class="intro-x flex items-center h-10">
@@ -839,10 +839,10 @@
                 </TinySlider>
               </div>
             </div>
-          </div>
+          </div> -->
           <!-- END: Important Notes -->
           <!-- BEGIN: Schedules -->
-          <div
+          <!-- <div
             class="col-span-12 md:col-span-6 xl:col-span-4 2xl:col-span-12 xl:col-start-1 xl:row-start-2 2xl:col-start-auto 2xl:row-start-auto mt-3"
           >
             <div class="intro-x flex items-center h-10">
@@ -947,7 +947,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
           <!-- END: Schedules -->
         </div>
       </div>
@@ -956,13 +956,14 @@
 </template>
 
 <script setup>
-import { ref, provide } from "vue";
+import { ref, provide, onMounted } from "vue";
 import ReportLineChart from "@/components/report-line-chart/Main.vue";
 import ReportDonutChart from "@/components/report-donut-chart/Main.vue";
 import ReportPieChart from "@/components/report-pie-chart/Main.vue";
 import ReportMap from "@/components/report-map/Main.vue";
 import ReportDonutChart1 from "@/components/report-donut-chart-1/Main.vue";
 import SimpleLineChart1 from "@/components/simple-line-chart-1/Main.vue";
+import { Auth } from "../../firebase/init";
 
 const salesReportFilter = ref();
 const importantNotesRef = ref();
@@ -980,4 +981,16 @@ const nextImportantNotes = () => {
   const el = importantNotesRef.value;
   el.tns.goTo("next");
 };
+
+const user = ref({});
+
+onMounted(() => {
+  let interval = setInterval(() => {
+    if (Auth.currentUser !== null) {
+      clearInterval(interval);
+
+      user.value = Auth.currentUser;
+    }
+  }, 1);
+});
 </script>
