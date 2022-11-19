@@ -166,6 +166,9 @@
           <DropdownItem class="hover:bg-white/5">
             <HelpCircleIcon class="w-4 h-4 mr-2" /> Ayuda
           </DropdownItem>
+          <DropdownItem class="hover:bg-white/5" @click="switchMode">
+            <MoonIcon class="w-4 h-4 mr-2" /> Dark mode
+          </DropdownItem>
           <DropdownDivider class="border-white/[0.08]" />
           <DropdownItem class="hover:bg-white/5" @click="signOut">
             <ToggleRightIcon class="w-4 h-4 mr-2" /> Cerrar Sesion
@@ -182,7 +185,25 @@
 import { onMounted, ref } from "vue";
 import { useRouter } from "vue-router";
 import { Auth } from "../../firebase/init";
+import { computed } from "vue";
+import { useDarkModeStore } from "@/stores/dark-mode";
+import dom from "@left4code/tw-starter/dist/js/dom";
 
+const darkModeStore = useDarkModeStore();
+const darkMode = computed(() => darkModeStore.darkMode);
+
+const setDarkModeClass = () => {
+  darkMode.value
+    ? dom("html").addClass("dark")
+    : dom("html").removeClass("dark");
+};
+
+const switchMode = () => {
+  darkModeStore.setDarkMode(!darkMode.value);
+  setDarkModeClass();
+};
+
+setDarkModeClass();
 
 const router = useRouter();
 const searchDropdown = ref(false);
