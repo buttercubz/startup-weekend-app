@@ -1,0 +1,17 @@
+{
+  "short_name": "Mi Chelito",
+  "name": "Mi Chelito",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/5554/5554644.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#f6f5f5",
+  "shortcuts": [],
+  "description": "Encuentra tu mejor opcion financiera",
+  "screenshots": []
+}

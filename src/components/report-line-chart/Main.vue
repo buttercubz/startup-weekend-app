@@ -31,23 +31,23 @@ const colorScheme = computed(() => useColorSchemeStore().colorScheme);
 const data = computed(() => {
   return {
     labels: [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
+      "Ene",
+      "Febr",
+      "Marz",
+      "Abr",
       "May",
       "Jun",
       "Jul",
-      "Aug",
-      "Sep",
+      "Agos",
+      "Sept",
       "Oct",
       "Nov",
-      "Dec",
+      "Dic",
     ],
     datasets: [
       {
         label: "# of Votes",
-        data: [0, 200, 250, 200, 700, 550, 650, 1050, 950, 1100, 900, 1200],
+        data: [0, 1.20, 1.25, 1.20, 1.70, 2.55, 2.65, 2.105, 3.95, 2.110, 3.90, 4.120],
         borderWidth: 2,
         borderColor: colorScheme.value ? colors.primary(0.8) : "",
         backgroundColor: "transparent",
@@ -56,7 +56,7 @@ const data = computed(() => {
       },
       {
         label: "# of Votes",
-        data: [0, 300, 400, 560, 320, 600, 720, 850, 690, 805, 1200, 1010],
+        data: [0, 2.30, 1.40, 1.56, 2.32, 2.60, 2.72, 2.85, 3.69, 3.80, 3.120, 3.101],
         borderWidth: 2,
         borderDash: [2, 2],
         borderColor: darkMode.value
@@ -64,7 +64,7 @@ const data = computed(() => {
           : colors.slate["400"](),
         backgroundColor: "transparent",
         pointBorderColor: "transparent",
-        tension: 0.4,
+        tension: 0.8,
       },
     ],
   };
@@ -98,7 +98,7 @@ const options = computed(() => {
           },
           color: colors.slate["500"](0.8),
           callback: function (value) {
-            return "$" + value;
+            return "% " + value;
           },
         },
         grid: {

@@ -6,17 +6,17 @@ export const useSideMenuStore = defineStore("sideMenu", {
       {
         icon: "HomeIcon",
         pageName: "side-menu-dashboard",
-        title: "Dashboard",
+        title: "Panel",
         subMenu: [
           {
-            icon: "",
+            icon: "BoxIcon",
             pageName: "side-menu-dashboard-overview-1",
-            title: "Overview 1",
+            title: "Feed",
           },
           {
             icon: "",
             pageName: "side-menu-dashboard-overview-2",
-            title: "Overview 2",
+            title: "Buscar",
           },
           {
             icon: "",

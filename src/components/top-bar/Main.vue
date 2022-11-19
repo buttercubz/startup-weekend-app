@@ -3,27 +3,14 @@
   <div class="top-bar">
     <!-- BEGIN: Breadcrumb -->
     <nav aria-label="breadcrumb" class="-intro-x mr-auto hidden sm:flex">
-      <ol class="breadcrumb">
+      <!-- <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="#">Application</a></li>
         <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
-      </ol>
+      </ol> -->
     </nav>
     <!-- END: Breadcrumb -->
     <!-- BEGIN: Search -->
     <div class="intro-x relative mr-3 sm:mr-6">
-      <!-- <div class="search hidden sm:block">
-        <input
-          type="text"
-          class="search__input form-control border-transparent"
-          placeholder="Search..."
-          @focus="showSearchDropdown"
-          @blur="hideSearchDropdown"
-        />
-        <SearchIcon class="search__icon dark:text-slate-500" />
-      </div> -->
-      <!-- <a class="notification sm:hidden" href="">
-        <SearchIcon class="notification__icon dark:text-slate-500" />
-      </a> -->
       <div class="search-result" :class="{ show: searchDropdown }">
         <div class="search-result__content">
           <div class="search-result__content__title">Pages</div>
@@ -103,7 +90,7 @@
     </div>
     <!-- END: Search -->
     <!-- BEGIN: Notifications -->
-    <Dropdown class="intro-x mr-auto sm:mr-6">
+    <!-- <Dropdown class="intro-x mr-auto sm:mr-6">
       <DropdownToggle
         tag="div"
         role="button"
@@ -146,7 +133,7 @@
           </div>
         </DropdownContent>
       </DropdownMenu>
-    </Dropdown>
+    </Dropdown> -->
     <!-- END: Notifications -->
     <!-- BEGIN: Account Menu -->
     <Dropdown class="intro-x w-8 h-8">
