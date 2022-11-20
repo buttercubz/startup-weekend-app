@@ -13,21 +13,21 @@ export const useSideMenuStore = defineStore("sideMenu", {
             pageName: "side-menu-dashboard-overview-1",
             title: "Feed",
           },
-          {
-            icon: "",
-            pageName: "side-menu-dashboard-overview-2",
-            title: "Buscar",
-          },
-          {
-            icon: "",
-            pageName: "side-menu-dashboard-overview-3",
-            title: "Overview 3",
-          },
-          {
-            icon: "",
-            pageName: "side-menu-dashboard-overview-4",
-            title: "Overview 4",
-          },
+          // {
+          //   icon: "",
+          //   pageName: "side-menu-dashboard-overview-2",
+          //   title: "Solicitar",
+          // },
+          // {
+          //   icon: "",
+          //   pageName: "side-menu-dashboard-overview-3",
+          //   title: "Overview 3",
+          // },
+          // {
+          //   icon: "",
+          //   pageName: "side-menu-dashboard-overview-4",
+          //   title: "Overview 4",
+          // },
         ],
       },
       // {

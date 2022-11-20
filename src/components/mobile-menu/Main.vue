@@ -8,11 +8,7 @@
   >
     <div class="mobile-menu-bar">
       <a href="" class="flex mr-auto">
-        <img
-          alt="Midone Tailwind HTML Admin Template"
-          class="w-6"
-          src="https://cdn-icons-png.flaticon.com/512/2936/2936758.png"
-        />
+        <img alt="Midone Tailwind HTML Admin Template" class="w-6" src="/src/assets/images/logo.svg">
       </a>
       <a href="javascript:;" class="mobile-menu-toggler">
         <BarChart2Icon

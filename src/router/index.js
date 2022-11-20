@@ -86,7 +86,7 @@ const routes = [
         component: () => import("../views/dashboard-overview-1/Main.vue"),
       },
       {
-        path: "buscar",
+        path: "solicitar",
         name: "side-menu-dashboard-overview-2",
         component: () => import("../views/dashboard-overview-2/Main.vue"),
       },
